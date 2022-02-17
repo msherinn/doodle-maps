@@ -18,20 +18,25 @@ internal class Program
 
         string[,] map = generator.Generate();
 
-        List<Point> GetShortestPath(string[,] map, Point start, Point goal)
-        {
-            return null;
-        }
-        
         new MapPrinter().Print(map);
-        Point start = new Point(6, 2);
-        Point goal = new Point(24, 14);
+        Console.Write("Enter start point: ");
+        string startInput = Console.ReadLine();
+        Console.Write("Enter goal point: ");
+        string goalInput = Console.ReadLine();
+        var stringStartInput = startInput.Split(',').ToList();
+        var stringGoalInput = goalInput.Split(',').ToList();
+        var start = new Point(Int32.Parse(stringStartInput[0]), Int32.Parse(stringStartInput[1]));
+        var goal = new Point(Int32.Parse(stringGoalInput[0]), Int32.Parse(stringGoalInput[1]));
+
+        /*var start = new Point(6, 2);
+        var goal = new Point(20, 80);*/
         var pointList = new List<Point>();
-        var path = BFS.PaintBFS(pointList, start, goal, map);
+        pointList.Add(start);
+        var path = BFS.BFSearch(pointList, start, goal, map);
         foreach (var point in path)
         {
-            Console.WriteLine("path: " + point.Column + ", " + point.Row);
-            map[point.Row, point.Column] = "*";
+            //Console.WriteLine("path: " + point.Column + ", " + point.Row);
+            map[point.Row, point.Column] = ".";
         }
         new MapPrinter().Print(map);
     }
