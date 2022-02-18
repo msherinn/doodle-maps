@@ -13,7 +13,8 @@ internal class Program
         {
             Height = 35,
             Width = 90,
-            Seed = 1
+            Seed = 1,
+            Noise = 0.9f
         });
 
         string[,] map = generator.Generate();
@@ -29,11 +30,13 @@ internal class Program
         var goal = new Point(Int32.Parse(stringGoalInput[0]), Int32.Parse(stringGoalInput[1]));
 
         /*var start = new Point(6, 2);
-        var goal = new Point(20, 80);*/
+        var goal = new Point(20, 80);
         var pointList = new List<Point>();
         pointList.Add(start);
-        var path = BFS.BFSearch(pointList, start, goal, map);
-        foreach (var point in path)
+        var result = BFS.BFSearch(pointList, start, goal, map);*/
+
+        var result = Dijkstra.Search(start, goal, map);
+        foreach (var point in result)
         {
             //Console.WriteLine("path: " + point.Column + ", " + point.Row);
             map[point.Row, point.Column] = ".";
