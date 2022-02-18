@@ -1,0 +1,15 @@
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\DoodleMaps.exe
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\DoodleMaps.deps.json
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\DoodleMaps.runtimeconfig.json
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\DoodleMaps.dll
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\ref\DoodleMaps.dll
+C:\Sandbox\doodle-maps\DoodleMaps\bin\Debug\net6.0\DoodleMaps.pdb
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.csproj.AssemblyReference.cache
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.AssemblyInfoInputs.cache
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.AssemblyInfo.cs
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.csproj.CoreCompileInputs.cache
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.dll
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\ref\DoodleMaps.dll
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.pdb
+C:\Sandbox\doodle-maps\DoodleMaps\obj\Debug\net6.0\DoodleMaps.genruntimeconfig.cache
