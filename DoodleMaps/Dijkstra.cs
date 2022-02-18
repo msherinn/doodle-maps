@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Kse.Algorithms.Samples;
 
@@ -8,19 +9,16 @@ public class Dijkstra
     {
         var visited = new List<Point>();
         PriorityQueue<Point, int> queue = new PriorityQueue<Point, int>();
-        int distance = 0;
-        queue.Enqueue(start, distance);
-        while (queue.Count > 0)
+        Visit(start);
+        queue.Enqueue(start, start.Distance);
+        while (!visited.Contains(goal) || queue.Count > 0)
         {
-            distance += 1;
             var next = queue.Dequeue();
-            Visit(next);
-            var neighbours = GetNeighbours(next.Row, next.Column, map);
-            if (visited.Contains(goal))
-            {
-                break;
-            }
+            var offsetRow = Math.Abs(next.Row - start.Row);
+            var offsetColumn = Math.Abs(next.Column - start.Column);
+            var offset = offsetColumn + offsetRow;
             
+            var neighbours = GetNeighbours(next.Row, next.Column, map);
             foreach (var neighbour in neighbours)
             {
                 if (!visited.Contains(neighbour))
@@ -29,10 +27,11 @@ public class Dijkstra
                     {
                         goal.Parent = visited.Count - 1;
                     }
-                    
+
                     var point = neighbour;
                     point.Parent = visited.Count - 1;
-                    queue.Enqueue(point, distance);
+                    Visit(neighbour);
+                    queue.Enqueue(point, offset);
                 }
             }
         }
@@ -48,7 +47,6 @@ public class Dijkstra
 
         void Visit(Point point)
             {
-                //map[point.Row, point.Column] = ".";
                 visited.Add(point);
             }
 
