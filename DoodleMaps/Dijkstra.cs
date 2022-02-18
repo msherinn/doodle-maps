@@ -17,6 +17,7 @@ public class Dijkstra
             var offsetRow = Math.Abs(next.Row - start.Row);
             var offsetColumn = Math.Abs(next.Column - start.Column);
             var offset = offsetColumn + offsetRow;
+            
             var neighbours = GetNeighbours(next.Row, next.Column, map);
             foreach (var neighbour in neighbours)
             {
